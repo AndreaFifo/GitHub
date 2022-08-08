@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;1,600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background: #141C2F;
+    font-family: "Montserrat";
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    color: white;
+}
+
+header .theme{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-weight: 600;
+}
+
+header .theme:hover{
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+main > *{
+    background: #1F2A48;
+    border-radius: 14px;
+}
+
+main .search-bar{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+main .search-bar i{
+    padding: 0 20px;
+    font-size: 24px;
+    color: #0079FF;
+}
+
+main .search-bar input{
+    width: 100%;
+    font-size: 18px;
+    background: transparent;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: "Montserrat";
+    font-weight: 600;
+}
+
+main .search-bar input::placeholder{
+    color: rgb(216, 216, 216);
+}
+
+main .search-bar .btn{
+    background: #0079FF;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+main .search-bar .btn:hover{
+    cursor: pointer;
+    background: #0069e0;
+}
+
+main .user-information{
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    height: max-content;
+    max-height: 1000px;
+}
+
+.user-information .desktop-img img, .user-information .mobile-img img{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+main .user-information .user-personal-data{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.user-personal-data .top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-personal-data .top .left{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    letter-spacing: 1px;
+}
+
+.top .left .text h2{
+    color: white;
+    margin-bottom: 5px;
+}
+
+.top .left .text a{
+    color: #0079FF;
+    font-weight: 600;
+}
+
+.top .left .text a:hover{
+    color: #0069e0;
+}
+
+.top .right{
+    color: rgb(216, 216, 216);
+    font-weight: 600;
+}
+
+.user-personal-data .bio{
+    color: rgb(216, 216, 216);
+    font-weight: 600;
+    margin: 5px 0 20px;
+}
+
+.user-personal-data .profile-information{
+    background: #141C2F;
+    display: flex;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.profile-information .info{
+    width: 33.3%;
+}
+
+.profile-information small{
+    color: rgb(216, 216, 216);
+    font-weight: 600;
+}
+
+.profile-information h2{
+    color: white;
+    font-size: 20px;
+}
+
+.user-personal-data .contact-information{
+    display: flex;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-information .coloumn{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.contact-information .coloumn i{
+    width: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contact-information .coloumn a{
+    font-weight: 600;
+}
+
+.contact-information .coloumn a:hover{
+    color: rgb(216, 216, 216);
+}
+
+.mobile-img{
+    display: none;
+}
+
+.hidden{
+    height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.error{
+    background: transparent;
+    color: #e00038;
+    font-weight: 600;
+    margin-top: -20px;
+}

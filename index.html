@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>DevFinder</title>
+    </head>
+    <body>
+        <header>
+            <h2>DevFinder</h2>
+            <div class="theme">
+                Light <i class="fa-solid fa-sun"></i>
+            </div>
+        </header>
+
+        <main>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-bar" placeholder="Search GitHub username...">
+                <div class="btn" id="search-btn">Search</div>
+            </div>
+            <div class="user-information hidden">
+                <div class="desktop-img">
+                    <img alt="profile pic">
+                </div>
+                <div class="user-personal-data">
+                    <div class="top">
+                        <div class="left">
+                            <img alt="profile pic" class="mobile-img">
+                            <div class="text">
+                                <h2 id="user-name"></h2>
+                                <a target="_blank" id="user-nickname"></a>
+                            </div>
+                        </div>
+                        <p class="right" id="joined"></p>
+                    </div>
+                    <div class="bio" id="bio"></div>
+                    <div class="profile-information">
+                        <div class="info">
+                            <small>Repos</small>
+                            <h2 id="repos"></h2>
+                        </div>
+                        <div class="info">
+                            <small>Followers</small>
+                            <h2 id="followers"></h2>
+                        </div>
+                        <div class="info">
+                            <small>Following</small>
+                            <h2 id="following"></h2>
+                        </div>
+                    </div>
+                    <div class="contact-information">
+                        <div class="coloumn">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <a target="_blank" id="location"></a>
+                        </div>
+                        <div class="coloumn">
+                            <i class="fa-brands fa-twitter"></i>
+                            <a target="_blank" id="twitter"></a>
+                        </div>
+                        <div class="coloumn">
+                            <i class="fa-solid fa-link"></i>
+                            <a target="_blank" id="blog"></a>
+                        </div>
+                        <div class="coloumn">
+                            <i class="fa-solid fa-building"></i>
+                            <a id="company"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="./script.js"></script>
+        <script src="https://kit.fontawesome.com/27b579bffd.js" crossorigin="anonymous"></script>
+    </body>
+</html>

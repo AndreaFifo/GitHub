@@ -9,7 +9,7 @@ window.onload = function(){
                 document.querySelector('.error').remove();
             nickname = searchBar.value;
         
-            fetch(`https://api.github.com/users/AndreaFifo`, { cache: 'no-cache' })
+            fetch(`https://api.github.com/users/` + nickname, { cache: 'no-cache' })
                 .then((response) => {
                     if(response.status === 404)
                         throw new Error('User not found.');
@@ -59,8 +59,11 @@ window.onload = function(){
 
     const themeBtn = document.querySelector('.theme');
     const theme = document.getElementById('theme');
+    
 
     themeBtn.addEventListener('click', () => {
         theme.setAttribute('href', theme.getAttribute('href') === './theme/dark.css' ? './theme/light.css' : './theme/dark.css');
+        
+        themeBtn.innerHTML = theme.getAttribute('href') === './theme/dark.css' ? 'Light <i class="fa-solid fa-sun"></i>' : 'Dark <i class="fa-solid fa-moon"></i>';
     })
 }

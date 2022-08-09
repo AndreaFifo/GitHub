@@ -220,6 +220,10 @@ main .user-information .user-personal-data{
 }
 
 @media screen and (max-width: 800px){
+    body{
+        height: max-content;
+    }
+
     .desktop-img{
         display: none;
     }

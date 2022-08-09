@@ -251,10 +251,6 @@ main .user-information .user-personal-data{
         padding: 25px 30px !important;
         gap: 10px;
     }
-
-    .user-personal-data .contact-information{
-        justify-content: center;
-    }
 }
 
 .user-personal-data .top .left{

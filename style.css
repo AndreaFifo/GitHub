@@ -222,6 +222,7 @@ main .user-information .user-personal-data{
 @media screen and (max-width: 800px){
     body{
         height: max-content;
+        min-height: 100vh;
     }
 
     .desktop-img{

@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./theme/dark.css" id="theme">
         <title>DevFinder</title>
     </head>
     <body>
@@ -17,9 +18,11 @@
 
         <main>
             <div class="search-bar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="search-bar" placeholder="Search GitHub username...">
-                <div class="btn" id="search-btn">Search</div>
+                <div class="left">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-bar" placeholder="Search GitHub username...">
+                </div>
+                <div class="btn" id="search-btn">Search <i class="fa-solid fa-magnifying-glass"></i></div>
             </div>
             <div class="user-information hidden">
                 <div class="desktop-img">
@@ -27,14 +30,14 @@
                 </div>
                 <div class="user-personal-data">
                     <div class="top">
-                        <div class="left">
-                            <img alt="profile pic" class="mobile-img">
-                            <div class="text">
+                        <img alt="profile pic" class="mobile-img">
+                        <div class="text">
+                            <div class="left">
                                 <h2 id="user-name"></h2>
                                 <a target="_blank" id="user-nickname"></a>
                             </div>
+                            <p class="right" id="joined"></p>
                         </div>
-                        <p class="right" id="joined"></p>
                     </div>
                     <div class="bio" id="bio"></div>
                     <div class="profile-information">

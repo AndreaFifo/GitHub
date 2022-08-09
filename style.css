@@ -13,8 +13,9 @@ body{
     align-items: center;
     justify-content: center;
     gap: 40px;
-    background: #141C2F;
+    background: var(--bg);
     font-family: "Montserrat";
+    padding: 20px 8%;
 }
 
 a{
@@ -28,7 +29,7 @@ header{
     justify-content: space-between;
     width: 100%;
     max-width: 800px;
-    color: white;
+    color: var(--important-text);
 }
 
 header .theme{
@@ -36,6 +37,13 @@ header .theme{
     gap: 15px;
     align-items: center;
     font-weight: 600;
+    font-size: clamp(0.875rem, 0.8323rem + 0.2439vw, 1.125rem);
+}
+
+@media screen and (max-width: 400px) {
+    header .theme{
+        gap: 7px;
+    }
 }
 
 header .theme:hover{
@@ -51,7 +59,7 @@ main{
 }
 
 main > *{
-    background: #1F2A48;
+    background: var(--container);
     border-radius: 14px;
 }
 
@@ -61,7 +69,17 @@ main .search-bar{
     align-items: center;
 }
 
-main .search-bar i{
+main .search-bar .left{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.search-bar, .user-information{
+    box-shadow: 0px 10px 15px -3px var(--box-shadow);
+}
+
+main .search-bar .left > i{
     padding: 0 20px;
     font-size: 24px;
     color: #0079FF;
@@ -74,13 +92,13 @@ main .search-bar input{
     padding: 10px 5px;
     border: none;
     outline: none;
-    color: white;
+    color: var(--important-text);
     font-family: "Montserrat";
     font-weight: 600;
 }
 
 main .search-bar input::placeholder{
-    color: rgb(216, 216, 216);
+    color: var(--text);
 }
 
 main .search-bar .btn{
@@ -96,6 +114,40 @@ main .search-bar .btn:hover{
     background: #0069e0;
 }
 
+main .search-bar .btn i{
+    display: none;
+}
+
+@media screen and (max-width: 520px) {
+    main .search-bar{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    main .search-bar .left > i{
+        display: none;
+    }
+    
+    main .search-bar input{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    main .search-bar .btn{
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    main .search-bar .btn i{
+        display: block;
+    }
+}
+
 main .user-information{
     display: flex;
     gap: 40px;
@@ -104,7 +156,7 @@ main .user-information{
     max-height: 1000px;
 }
 
-.user-information .desktop-img img, .user-information .mobile-img img{
+.user-information .desktop-img img{
     width: 130px;
     height: 130px;
     object-fit: cover;
@@ -120,43 +172,125 @@ main .user-information .user-personal-data{
 
 .user-personal-data .top{
     display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 440px){
+    .user-personal-data .top{
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+    }
+
+    .user-personal-data .top::after{
+        content: "";
+        background: var(--after);
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: -20px;
+    }
+
+    .top .left a{
+        margin-top: 5px;
+    }
+
+    .user-personal-data .profile-information{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .user-personal-data .bio{
+        text-align: center;
+    }
+
+    .profile-information .info{
+        width: max-content !important;
+        text-align: center;
+    }
+}
+
+.user-personal-data .top .text{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px){
+    .desktop-img{
+        display: none;
+    }
+
+    .user-information .top{
+        gap: 30px;
+        margin-bottom: 10px;
+    }
+
+    .user-personal-data .top .text{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mobile-img{
+        display: block !important;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+
+    .user-personal-data .profile-information{
+        padding: 25px 30px !important;
+        gap: 10px;
+    }
+
+    .user-personal-data .contact-information{
+        justify-content: center;
+    }
 }
 
 .user-personal-data .top .left{
     display: flex;
-    align-items: center;
-    gap: 40px;
-    letter-spacing: 1px;
+    flex-direction: column;
 }
 
-.top .left .text h2{
-    color: white;
+.top .left h2{
+    color: var(--important-text);
     margin-bottom: 5px;
+    font-size: clamp(1rem, 0.7308rem + 1.5385vw, 1.5rem);
 }
 
-.top .left .text a{
+.top .left a{
     color: #0079FF;
     font-weight: 600;
+    font-size: clamp(0.875rem, 0.8077rem + 0.3846vw, 1rem);
 }
 
-.top .left .text a:hover{
+.top .left a:hover{
     color: #0069e0;
 }
 
 .top .right{
-    color: rgb(216, 216, 216);
+    color: var(--text);
+    font-weight: 600;
+    font-size: clamp(0.75rem, 0.6154rem + 0.7692vw, 1rem);
+}
+
+.user-personal-data .bio, .profile-information small{
+    color: var(--text);
     font-weight: 600;
 }
 
 .user-personal-data .bio{
-    color: rgb(216, 216, 216);
-    font-weight: 600;
     margin: 5px 0 20px;
+    font-size: clamp(0.875rem, 0.8077rem + 0.3846vw, 1rem);
 }
 
 .user-personal-data .profile-information{
-    background: #141C2F;
+    background: var(--profile-info);
     display: flex;
     padding: 15px 20px;
     border-radius: 10px;
@@ -166,13 +300,8 @@ main .user-information .user-personal-data{
     width: 33.3%;
 }
 
-.profile-information small{
-    color: rgb(216, 216, 216);
-    font-weight: 600;
-}
-
 .profile-information h2{
-    color: white;
+    color: var(--important-text);
     font-size: 20px;
 }
 
@@ -188,7 +317,8 @@ main .user-information .user-personal-data{
     display: flex;
     align-items: center;
     gap: 10px;
-    color: white;
+    color: var(--link);
+    min-width: 150px;
 }
 
 .contact-information .coloumn i{
@@ -199,10 +329,12 @@ main .user-information .user-personal-data{
 
 .contact-information .coloumn a{
     font-weight: 600;
+    font-size: clamp(0.875rem, 0.8077rem + 0.3846vw, 1rem);
 }
 
 .contact-information .coloumn a:hover{
-    color: rgb(216, 216, 216);
+    color: var(--text);
+    cursor: pointer;
 }
 
 .mobile-img{
